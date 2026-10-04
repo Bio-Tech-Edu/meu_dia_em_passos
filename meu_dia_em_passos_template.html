@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Dia em Passos - Template Base</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-cream: #FFF9F0;
+            --text-charcoal: #3A3A3A;
+        }
+
+        body {
+            background-color: #e5e7eb; /* Gray background for the screen outside the page */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+            color: var(--text-charcoal);
+        }
+
+        /* A4 Paper Dimensions and Styling */
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            background-color: var(--bg-cream);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Ensure content stays within the page */
+        }
+
+        /* Inner container to provide margins simulating printable area */
+        .page-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20mm; /* Standard margin */
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        /* CSS Rainbow Infinity Symbol (Approximation without SVG/Image dependency) */
+        .infinity-symbol {
+            position: relative;
+            width: 40px;
+            height: 20px;
+            box-sizing: border-box;
+        }
+        
+        .infinity-symbol::before,
+        .infinity-symbol::after {
+            content: "";
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: 4px solid;
+            border-radius: 50px 50px 0 50px;
+            transform: rotate(-45deg);
+        }
+
+        .infinity-symbol::before {
+            border-color: #ef4444 #eab308 #3b82f6 #ef4444; /* Approximate rainbow borders */
+            left: 0;
+        }
+
+        .infinity-symbol::after {
+            border-color: #3b82f6 #a855f7 #ef4444 #3b82f6; /* Approximate rainbow borders */
+            left: auto;
+            right: 0;
+            border-radius: 50px 50px 50px 0;
+            transform: rotate(45deg);
+        }
+
+        /* Print media query to ensure perfect printing */
+        @media print {
+            body {
+                background-color: transparent;
+                display: block;
+            }
+            .a4-page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a4-page">
+        <div class="page-content">
+            
+            <!-- Header Section -->
+            <header class="flex justify-between items-center border-b-2 border-gray-200 pb-4 mb-6">
+                <!-- Placeholder for Page Title -->
+                <div class="w-3/4 h-12 bg-gray-100 rounded-xl border border-gray-200 flex items-center px-4 text-gray-400 italic text-xl font-bold">
+                    [Título da Página]
+                </div>
+                
+                <!-- Infinity Symbol Logo -->
+                <div class="flex items-center justify-center w-1/4">
+                     <div class="infinity-symbol" aria-label="Símbolo do Infinito da Neurodiversidade"></div>
+                </div>
+            </header>
+
+            <!-- Central Content Area -->
+            <!-- This is the main empty space where the planner components will go -->
+            <main class="flex-1 bg-white rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center p-4">
+                 <p class="text-gray-400 text-lg text-center font-bold">
+                     Área de Conteúdo Central<br>
+                     <span class="text-sm font-normal">(Insira os cartões, grades ou informações aqui)</span>
+                 </p>
+            </main>
+
+            <!-- Footer Section -->
+            <footer class="mt-6 border-t-2 border-gray-200 pt-4 flex justify-between items-center text-sm font-bold text-gray-500">
+                <div>Meu Dia em Passos</div>
+                <div>[Nº da Página]</div>
+            </footer>
+
+        </div>
+    </div>
+</body>
+</html>

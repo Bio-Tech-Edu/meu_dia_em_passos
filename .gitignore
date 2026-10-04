@@ -1,0 +1,10 @@
+# Dados reais da criança NUNCA entram no repositório
+/data/
+*.local.*
+# Fotos (exceto mascote e páginas exportadas)
+assets/**/*.jpg
+assets/**/*.jpeg
+assets/**/*.heic
+!assets/mascote/**
+!assets/paginas/**
+.DS_Store

@@ -1,0 +1,16 @@
+---
+description: Regras do projeto "Meu Dia em Passos" (planner visual para criança autista)
+globs: ["src/**", "docs/**", "prompts/**"]
+alwaysApply: true
+---
+
+# Regras do projeto para o Cursor
+
+- Siga `AGENTS.md`, que é a fonte principal de regras.
+- Escreva todo texto em português do Brasil.
+- Use HTML, CSS e JS puros, sem dependências, sem CDN e sem chamadas de rede.
+- Nunca use dados reais de criança; use "Criança A". Ignore `/data/`.
+- Use os tokens de design de `AGENTS.md`. Páginas da criança com fundo liso, no máximo 5 elementos, títulos com 28px ou mais e rótulos com 18px ou mais.
+- Garanta acessibilidade (WCAG AA, teclado, `alt`, `prefers-reduced-motion`) e impressão A4.
+- Sem peças de quebra-cabeça e sem conteúdo clínico ou prescritivo.
+- Commits: `feat(pXX): ...`, `fix(pXX): ...`.
