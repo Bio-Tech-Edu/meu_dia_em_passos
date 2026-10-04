@@ -172,10 +172,10 @@ Calm, minimalist, lots of white space. No patterns, no puzzle pieces. All text i
 
 **Prompt S1.1 (IA de texto): roteiro de imersão**
 ```text
-Você é uma psicopedagoga experiente em autismo na primeira infância.
+Você é uma neuropsicopedagoga experiente em autismo na primeira infância.
 Escreva, em português do Brasil, um roteiro de conversa acolhedor com a família de uma criança autista de 3 anos, não leitora, para montar um planner visual.
 Seções: rotina de um dia típico (manhã, tarde, noite); agenda semanal de terapias; escola; interesses favoritos; incômodos sensoriais (sons, luzes, texturas); o que acalma (incluindo silêncio); como se comunica; como reage a mudanças e a eventos sociais; alimentos que aceita e recusa; uso de tablet.
-Até 18 perguntas, curtas e abertas, sem jargão clínico. Termine com uma frase de agradecimento.
+Até 18 perguntas, curtas, algumas objetivas de multiplas escolhas e outras abertas, sem jargão clínico. Termine com uma frase de agradecimento.
 ```
 
 **Prompt S1.2 (IA de texto): perfil fictício**
